@@ -7,6 +7,12 @@ import org.zerock.ex2106.entitiy.Guestbook;
 
 public interface GuestbookService {
 
+    void remove(Long gno);
+
+    void modify(GuestbookDTO dto);
+
+    GuestbookDTO read(Long gno);
+
     Long register(GuestbookDTO dto);
 
     PageResultDTO<GuestbookDTO, Guestbook> getList(PageRequestDTO requestDTO);
